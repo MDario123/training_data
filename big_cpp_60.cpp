@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 
@@ -19,6 +20,7 @@ public:
 protected:
     std::string name_;
 };
+
 
 // Derived class: Alligator
 class Alligator : public Animal {
@@ -774,6 +776,19 @@ public:
 };
 
 
+// Derived class: Yak
+class Yak : public Animal {
+public:
+    // Constructor
+    Yak(const std::string& yakName) : Animal(yakName) {}
+
+    // Override the name method (optional, for customization)
+    std::string name() const override {
+        return "Yak: " + name_;
+    }
+};
+
+
 // Derived class: Zebra
 class Zebra : public Animal {
 public:
@@ -786,4 +801,6 @@ public:
     }
 };
 
+
 int main() {return 0;}
+
